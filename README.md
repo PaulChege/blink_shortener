@@ -28,6 +28,8 @@ To use the api, enter the url you wish to shorten along with your blink email an
 BlinkShortener::Shorten.new("https://google.com", "myemail@example.com", "mypassword").shorten
 ```
 
+This will return a shortened url in a form similar to: `http://b.link/9vwdx`
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

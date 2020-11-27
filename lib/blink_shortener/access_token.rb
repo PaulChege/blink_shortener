@@ -14,10 +14,12 @@ module BlinkShortener
       response = HTTParty.post(@url, body: {email: @email, password: @password}.to_json)
       case response["success"]
       when 0
-        raise "Invalid Authentication"
+        raise "Invalid Authentication: Blink email or password incorrect"
       when 1
         response["access_token"]
       end
+    rescue => ex
+      raise ex
     end
   end
 end

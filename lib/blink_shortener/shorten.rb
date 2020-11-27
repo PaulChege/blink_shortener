@@ -14,6 +14,8 @@ module BlinkShortener
     def shorten
       response = HTTParty.post(@shorten_url, body: {url: @shorten_url}.to_json, headers: {Authorization: "Bearer #{@token}"})
       response["objects"]&.first["short_link"]
+    rescue => ex
+      raise ex
     end
 
     private
@@ -21,6 +23,8 @@ module BlinkShortener
       def get_domain_id
         response = HTTParty.get(@domain_url, headers: {Authorization: "Bearer #{@token}"})
         response["objects"]&.first["id"]
+      rescue => ex
+        raise ex
       end
   end
 end
