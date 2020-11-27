@@ -1,8 +1,6 @@
 # BlinkShortener
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/blink_shortener`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Blink shortener is an API wrapper for the bl.ink (https://www.bl.ink/) that shortens any url.
 
 ## Installation
 
@@ -22,7 +20,13 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+After installation, make sure you have an account on bl.ink. If you do not have an account yet, you can sign up here: https://www.bl.ink/
+
+To use the api, enter the url you wish to shorten along with your blink email and password. For example:
+
+```ruby
+BlinkShortener::Shorten.new("https://google.com", "myemail@example.com", "mypassword").shorten
+```
 
 ## Development
 
@@ -33,7 +37,6 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/blink_shortener. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/blink_shortener/blob/master/CODE_OF_CONDUCT.md).
-
 
 ## License
 
