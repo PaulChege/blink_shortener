@@ -22,6 +22,12 @@ Or install it yourself as:
 
 After installation, make sure you have an account on bl.ink. If you do not have an account yet, you can sign up here: https://www.bl.ink/
 
+First include the gem at the top of the file you ar working on:
+
+```ruby
+require "blink_shortener/shorten"
+```
+
 To use the api, enter the url you wish to shorten along with your blink email and password. For example:
 
 ```ruby
